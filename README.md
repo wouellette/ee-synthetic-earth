@@ -2,9 +2,9 @@
 
 ## Introduction
 A GEE JS API implementation of the following algorithms to generate synthetic images of the earth's surface:
-- Greenest Earth: Temporal aggregation through the calculation of the small integral (Jônsson & Eklundh, 2002) of a vegetation index profile (default being NDVI)
-- Barest Earth: Temporal aggregation through the calculation of the Weighted Geometric Median (Roberts et al., 2019) with a negative loss function parameter to select bare(r) pixels.
-- Bare Earth: Temporal aggregation through the calculation of the HISET (Heiden et al., 2022) or GEOS3 (Dematte et al., 2019) algorithm to create bare soil-only composites.
+- Greenest Earth: Temporal aggregation through the calculation of the small integral [Jönsson & Eklundh, 2002](https://ieeexplore.ieee.org/document/1036010) of a vegetation index profile (default being NDVI).
+- Barest Earth: Temporal aggregation through the calculation of the Weighted Geometric Median [Roberts et al., 2019](https://www.nature.com/articles/s41467-019-13276-1) with a negative loss function parameter to select bare(r) pixels.
+- Bare Earth: Temporal aggregation through the calculation of the HISET [Heiden et al., 2022](https://www.mdpi.com/2072-4292/14/18/4526) or GEOS3 [Dematte et al., 2018](https://www.sciencedirect.com/science/article/abs/pii/S0034425718302049) algorithm to create bare soil-only composites.
 
 ## Features
 The algorithms implemented support the creation of application-specific, analysis-ready data corresponding to a given time interval.
@@ -35,13 +35,22 @@ especially in the context of the implementation of regenerative agriculture prac
 
 ![Bare Earth](images/bareSoil.png)
 
+## Synthetic Earth Trends
+
+Trends can also be generated from time series of synthetic earth images.
+
+The first trend is the brightness index trend of the Barest Earth time series of images. It is indicative of whether a surface is getting brighter over time or not.
+
+The second trend is the Landtrendr [Kennedy et al., 2018](https://www.mdpi.com/2072-4292/10/5/691) magnitude trend applied to the greenest earth- time series of images. It is indicative of whether a surface is gettin greener over time or not.
+
+![LandTrendR](images/LandTrendR.jpg)
 
 ## Examples
 
 1. **Synthetic Earth of an agrosilvopastoral area of Burkina Faso**
 
 The script implementing this use case is located under the `examples` folder, and can be accessed via this
-[link]() directly in the code editor.
+[link](https://code.earthengine.google.com/10950fd5f946e4ab75b4eeb4617962a0) directly in the code editor.
 
 ![Burkina Faso Example](images/SCR_burkinaFaso.gif.gif)
 
