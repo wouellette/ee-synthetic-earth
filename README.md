@@ -21,7 +21,7 @@ This composite is useful for monitoring temporal trends of vegetation greenness 
 
 ### Barest Earth
 
-The "Barest Earth" composite captures the bareness of the surfaces in a robust way by apply a negative weight factor to a greenness index (i.e. NDVI).
+The "Barest Earth" composite captures the bareness of the surfaces in a robust way by applying a negative weight factor to a greenness index (i.e. NDVI).
 This composite can be used for subsequent analyses of soil brightness over time, albedo studies, or to map soil strata across landscapes.
 
 ![Barest Earth](images/barestEarth.webp)
